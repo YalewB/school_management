@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h1>Welcome, {{ student.name }}</h1>
+<h2>Your Courses</h2>
+<ul>
+    {% for course in student.courses.all %}
+        <li>{{ course.name }} - {{ course.status }}</li>
+    {% endfor %}
+</ul>
+<h2>Your Grades</h2>
+<ul>
+    {% for grade in student.grades.all %}
+        <li>{{ grade.course.name }}: {{ grade.score }}</li>
+    {% endfor %}
+</ul>
+{% endblock %}

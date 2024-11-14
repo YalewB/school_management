@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h1>Director Dashboard</h1>
+<h2>Overview</h2>
+<ul>
+    <li>Total Enrollments: {{ total_enrollments }}</li>
+    <li>Active Teachers: {{ active_teachers }}</li>
+</ul>
+<h2>Reports</h2>
+<ul>
+    {% for report in reports %}
+        <li>{{ report.title }} - {{ report.date }}</li>
+    {% endfor %}
+</ul>
+{% endblock %}

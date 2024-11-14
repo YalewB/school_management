@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h1>Finance Dashboard</h1>
+<h2>Financial Overview</h2>
+<ul>
+    <li>Total Revenue: {{ total_revenue }}</li>
+    <li>Total Expenses: {{ total_expenses }}</li>
+    <li>Net Profit: {{ net_profit }}</li>
+</ul>
+<h2>Transactions</h2>
+<ul>
+    {% for transaction in transactions %}
+        <li>{{ transaction.date }}: {{ transaction.amount }} ({{ transaction.type }})</li>
+    {% endfor %}
+</ul>
+{% endblock %}

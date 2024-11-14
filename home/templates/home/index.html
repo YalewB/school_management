@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Deliverance Schools Management </title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+        nav {
+            display: flex;
+            justify-content: center;
+            background-color: #f2f2f2;
+            padding: 10px;
+        }
+        nav a {
+            color: #333;
+            text-decoration: none;
+            margin: 0 10px;
+            padding: 10px;
+            border-radius: 5px;
+        }
+        nav a:hover {
+            background-color: #333;
+            color: #fff;
+        }
+        main {
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Deliverance Schools Management system</h1>
+    </header>
+    <nav>
+        <a href="{% url 'login' %}">Login</a>
+        <a href="{% url 'student_dashboard' %}">Student Dashboard</a>
+        <a href="{% url 'teacher_dashboard' %}">Teacher Dashboard</a>
+        <a href="{% url 'admin_dashboard' %}">Admin Dashboard</a>
+        <a href="{% url 'director_dashboard' %}">Director Dashboard</a>
+        <a href="{% url 'parent_dashboard' %}">Parent Dashboard</a>
+        <a href="{% url 'finance_dashboard' %}">Finance Dashboard</a>
+    </nav>
+    <main>
+        <h2>Welcome to the Deliverance Schools Management System</h2>
+        <p>This system provides a comprehensive solution for managing our school's operations, from student records to financial management.</p>
+        <p>Click on the links above to access the various dashboards and functionalities of the system.</p>
+    </main>
+</body>
+</html>

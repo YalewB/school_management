@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h1>Admin Dashboard</h1>
+<h2>Site Statistics</h2>
+<ul>
+    <li>Total Students: {{ total_students }}</li>
+    <li>Total Teachers: {{ total_teachers }}</li>
+    <li>Total Courses: {{ total_courses }}</li>
+</ul>
+<h2>Recent Activities</h2>
+<ul>
+    {% for activity in recent_activities %}
+        <li>{{ activity.timestamp }}: {{ activity.description }}</li>
+    {% endfor %}
+</ul>
+{% endblock %}

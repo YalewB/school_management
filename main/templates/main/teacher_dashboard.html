@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h1>Welcome, {{ teacher.name }}</h1>
+<h2>Your Classes</h2>
+<ul>
+    {% for class in teacher.classes.all %}
+        <li>{{ class.name }} - {{ class.students.count }} students</li>
+    {% endfor %}
+</ul>
+<h2>Pending Assignments</h2>
+<ul>
+    {% for assignment in teacher.assignments.filter(status='pending') %}
+        <li>{{ assignment.title }} - Due: {{ assignment.due_date }}</li>
+    {% endfor %}
+</ul>
+{% endblock %}
